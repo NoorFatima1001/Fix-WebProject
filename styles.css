@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;            /* vertically center items */
+  background-color: #23252f;
+  padding: 0 20px;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;  /* horizontal menu */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  font-family: inherit;
+  color: white;
+  text-decoration: none;   /* no underline by default */
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;          /* yellow on hover */
+  text-decoration: underline; /* underline on hover */
+}
+
+
+
+.content {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.main-img {
+  width: 100%;
+  display: block;
+}
+
+/* Overlay container with spacing */
+.overlay-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
+  gap: 20px; /* spacing between overlay images */
+}
+
+.overlay-img {
+  max-width: 80%;
+  height: auto;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 20px; /* spacing below the images */
+  padding: 10px 20px;
+  background-color: #ffcc00;   /* yellow button */
+  color: #23252f;              /* dark text */
+ 
+  text-decoration: none;       /* remove underline */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e6b800;   /* darker yellow */
+  color: white;                /* white text on hover */
+}
+
+
+.after-image-text {
+  text-align: center;       /* center horizontally */
+  margin: 40px 0;           /* space above & below */
+}
+
+.after-image-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #23252f;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.after-image-text h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 300px;         
+  height:3px;              
+  background-color: #ffcc00; 
+  border-radius: 2px;       
+}
+
+.hexagon-gallery {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+  gap: 120px; 
+  margin: 20px 0;
+}
+
+.hex {
+  width: 150px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  size:30px;
+}
+
+.hex:hover {
+  transform: scale(1.05);
+}
+
+.bottom-row {
+  margin-top: -50px; /* overlap a bit to create a honeycomb effect */
+}
+
+/* Logo */
+.logo-img {
+  width: 200px;
+  height: auto;
+}
+
+/* Navbar Active Link */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffcc00;
+}
+
+/* Accent Heading */
+h2, h5.card-title {
+  color: #23252f;
+}
+
+/* Order Summary Total */
+.order-summary-total {
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Button Styling */
+.btn-custom {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  
+}
+.btn-custom:hover {
+  background-color: #e6b800;
+  color: #000;
+}
